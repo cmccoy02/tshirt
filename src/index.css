@@ -5,9 +5,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #f5f5f5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.slot-machine {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.reel {
+  width: 150px;
+  height: 150px;
+  margin: 0 10px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.reel img {
+  width: 100%;
+  height: auto;
+}
+
+.spinning img {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.spin-button {
+  margin-top: 30px;
+}
+
+.user-inputs {
+  margin-top: 20px;
+}
+
+.user-inputs label {
+  margin-right: 10px;
 }
